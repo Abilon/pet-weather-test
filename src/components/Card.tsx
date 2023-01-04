@@ -29,13 +29,13 @@ export const Card = ({ weather } :IProps) => {
                 На {todayDate}
             </Typography>
             <Typography variant="body2">
-                {`Ветер: ${weather.wind.speed} м в сек`}
+                {`Ветер: ${weather.wind.speed} м. в сек`}
                 <br/>
                 {`Температура: ${weather.main.temp} градусов`}
                 <br/>
                 {`Осадки: ${weather.weather[0].description}`}
                 <br/>
-                {`Давление: ${mmSt} мм РТ СТ`}
+                {`Давление: ${mmSt} мм. РТ. СТ.`}
                 <br/>
                 {`Влажность: ${weather.main.humidity} %`}
             </Typography>
