@@ -1,0 +1,27 @@
+.card-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    margin: 15px 0;
+  }
+
+  &__button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  &__weather-box {
+    border-left: 1px black solid;
+    padding-left: 5px;
+  }
+
+  &__text {
+    margin: 3px;
+    font-size: 16px;
+  }
+}
