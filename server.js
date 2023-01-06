@@ -9,10 +9,10 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(express.static('dist'));
+app.use(express.static('/dist'));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'build/index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
 const server = app.listen (process.env.PORT || port);
