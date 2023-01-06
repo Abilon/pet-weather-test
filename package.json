@@ -25,9 +25,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "webpack",
-    "webpack-dev-server": "webpack-dev-server"
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run build\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
