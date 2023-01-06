@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('dist'));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/bundle.js'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
 const server = app.listen (process.env.PORT || port);
