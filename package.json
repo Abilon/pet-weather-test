@@ -26,6 +26,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start-dev": "react-scripts start",
     "start": "node server.js",
     "build": "webpack",
     "dev": "concurrently --kill-others-on-fail \"npm run build\" \"npm run server\""
@@ -49,7 +50,9 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "copy-webpack-plugin": "^11.0.0",
+    "postcss-loader": "^7.0.2",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "ts-loader": "^9.4.1",

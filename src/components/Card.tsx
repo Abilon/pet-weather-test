@@ -37,7 +37,7 @@ export const Card = ({ weather } :IProps) => {
                 <br/>
                 {`Давление: ${mmSt} мм. РТ. СТ.`}
                 <br/>
-                {`Влажность: ${weather.main.humidity} %`}
+                {`Влажность: ${weather.main.humidity}%`}
             </Typography>
         </CardContent>
     </MuiCard>

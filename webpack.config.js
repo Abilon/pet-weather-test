@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -20,6 +21,7 @@ module.exports = {
                     "css-loader",
                     // Compiles Sass to CSS
                     "sass-loader",
+                    "postcss-loader",
                 ],
             },
         ],
@@ -31,6 +33,9 @@ module.exports = {
                     from: 'public/index.html',
                 }
             ]
+        }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(process.env)
         })
     ],
     resolve: {
