@@ -8,6 +8,8 @@ import { Card } from './Card'
 import { useCustomDispatch, useCustomSelector } from '../hooks/store';
 import { fetchCurrentWeather } from '../store/thunks/fetchCurrentWeather';
 
+import WeatherMap from "./WeatherMap";
+
 import './styles/home.scss';
 import './styles/form.scss';
 
@@ -39,10 +41,11 @@ export const Home = () => {
         </div>
     }
 
-    return <div className="home">
+    return <div className="home-block">
         <div className={cn("home__window", {"home__window_big" : state === 'card'})}>
             {   state === 'form' ? renderForm() : null  }
             {   state === 'card' ? renderCard() : null  }
         </div>
+        { state === 'card' ? <WeatherMap city={weather.name} /> : null }
     </div>
 }

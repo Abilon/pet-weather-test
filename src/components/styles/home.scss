@@ -18,17 +18,28 @@
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, -50%);
     transition: 1s;
     background-color: rgba(255, 255, 255, 0.9);
 
     &_big {
       min-width: 400px;
       min-height: 300px;
-      transform: translate(-50%, 100%);
+      transform: translate(-50%, -50%);
       transition: 1s;
     }
   }
+}
+
+.home-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#windy {
+  width: 70%;
+  height: 40%;
 }
 
 @media (max-width:600px) {
@@ -36,8 +47,7 @@
     &__window {
       &_big {
         min-width: 300px;
-        min-height: 400px;
-        transform: translate(-50%, 50%);
+        min-height: 300px;
       }
     }
   }
