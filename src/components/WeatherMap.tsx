@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
@@ -9,7 +9,7 @@ interface WeatherMapProps {
     city: string;
 }
 
-const WeatherMap = ({ city }) => {
+const WeatherMap = ({ city }: WeatherMapProps) => {
     const [coordinates, setCoordinates] = useState(null);
     const [mapInitialized, setMapInitialized] = useState(false);
     const [markers, setMarkers] = useState([]);
